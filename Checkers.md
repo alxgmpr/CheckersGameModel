@@ -9,21 +9,23 @@
 5) If the position is valid, GamePiece moves to destination
 6) If the GamePiece passes over an opponent in its vector, the opponent GamePiece is removed and Player receives a point.
 7) If the GamePiece reaches the end of the board, its status changes to KING
+8) Game continues until either player's score reaches the length of the number of initial game pieces.
+9) That player is now the winner, game is over.
 
 ### CheckersEnums.java
 ```java
 public enum PieceType {
-	MAN, 
+    MAN, 
     KING
 }
 
 public enum PieceColor {
-	LIGHT,
+    LIGHT,
     DARK
 }
 
 public enum GameState {
-	STARTING,
+    STARTING,
     PLAYING,
     FINISHED
 }
@@ -69,6 +71,8 @@ public void setGameState(GameState gameState);
 // Ensures that a move is not only valid, but also checks for opponent pieces in the path
 public void checkMove(PieceColor movingPieceColor, Point location, Point destination);
 
+// Checks if either players score has reached the maximum
+public void checkForWinner();
 
 ```
 
