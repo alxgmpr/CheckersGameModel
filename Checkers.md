@@ -1,5 +1,7 @@
 # Checkers Data Model Concept
 
+![Checkerboard visual](https://raw.githubusercontent.com/alxgmpr/CheckersGameModel/master/board_concept.png "(x,y) coordinate system")
+
 #### Game Process
 
 1) Ask for the Player names per each color
